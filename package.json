@@ -1,0 +1,20 @@
+{
+  "name": "agent-guard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "test": "python -m pytest tests -q",
+    "test:frontend": "npm --workspace frontend test",
+    "typecheck": "npm --workspace frontend run typecheck",
+    "build": "npm --workspace frontend run build",
+    "check": "npm test && npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "genlayer-js": "1.1.8"
+  }
+}
